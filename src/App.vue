@@ -1,7 +1,13 @@
 <template>
+  <Navbar />
   <router-view />
 </template>
-
+<script>
+import Navbar from "./components/Navbar.vue";
+export default {
+  components: { Navbar },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -22,5 +28,19 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+.nav-links {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 20px;
+}
+.nav-links a.router-link-active {
+  color: #ff8800;
 }
 </style>

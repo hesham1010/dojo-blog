@@ -1,24 +1,83 @@
 {
-    "posts":[
-        {
-            "id":1,
-            "title":"welcome to the new blog",
-            "body":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio sapiente magnam magni fugiat maxime illum accusantium deserunt atque officiis, saepe esse, est architecto hic nulla aspernatur! Cum perspiciatis aliquid fuga?",
-            "tags":[
-                "webdev",
-                "coding",
-                "news"
-            ]
-        },
-        {
-            "id":2,
-            "title":"Top 5 css tips",
-            "body":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio sapiente magnam magni fugiat maxime illum accusantium deserunt atque officiis, saepe esse, est architecto hic nulla aspernatur! Cum perspiciatis aliquid fuga?",
-            "tags":[
-                "css",
-                "webdev",
-                "news"
-            ]
-        }
-    ]
+  "posts": [
+    {
+      "id": "1",
+      "title": "welcome to the new blog",
+      "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio sapiente magnam magni fugiat maxime illum accusantium deserunt atque officiis, saepe esse, est architecto hic nulla aspernatur! Cum perspiciatis aliquid fuga?",
+      "tags": [
+        "webdev",
+        "coding",
+        "news"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Top 5 css tips",
+      "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio sapiente magnam magni fugiat maxime illum accusantium deserunt atque officiis, saepe esse, est architecto hic nulla aspernatur! Cum perspiciatis aliquid fuga?",
+      "tags": [
+        "css",
+        "webdev",
+        "news"
+      ]
+    },
+    {
+      "id": "eea7",
+      "title": "here we go",
+      "body": "dfmc  dfvnsdfrveklnv rfnwerfn we nf wefdwelfc we;pwmcfwefw;k cf;wekfnwekpfm",
+      "tags": [
+        "html",
+        "csss",
+        "wedferf"
+      ]
+    },
+    {
+      "id": "d234",
+      "title": "here we go",
+      "body": "dfmc  dfvnsdfrveklnv rfnwerfn we nf wefdwelfc we;pwmcfwefw;k cf;wekfnwekpfm",
+      "tags": [
+        "html",
+        "csss",
+        "wedferf"
+      ]
+    },
+    {
+      "id": "29de",
+      "title": "dwcf",
+      "body": "cfcfe",
+      "tags": [
+        "frvge",
+        "erfer",
+        "fwer",
+        "ferf"
+      ]
+    },
+    {
+      "id": "1543",
+      "title": "dweq",
+      "body": "edwcfef",
+      "tags": [
+        "fc",
+        "fcgbfb",
+        "gfbhg"
+      ]
+    },
+    {
+      "id": "f15b",
+      "title": "e4dfwef",
+      "body": "fdrcfcfwef",
+      "tags": [
+        "frcwer",
+        "wedfwefw",
+        "efcwecfwe"
+      ]
+    },
+    {
+      "id": "e2f6",
+      "title": "Eu velit est duis a",
+      "body": "Aliquip quos eaque q",
+      "tags": [
+        "Laborevelit accusan"
+      ]
+    }
+  ]
 }

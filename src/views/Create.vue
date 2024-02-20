@@ -1,6 +1,6 @@
 <template>
   <div class="create">
-    <form>
+    <form @submit.prevent="submitHanlder">
       <label>Title:</label>
       <input type="text" v-model="title" required />
       <label>Content</label>
@@ -8,7 +8,7 @@
       <label> tags (hit enter to add a tag) </label>
       <input type="text" v-model="tag" @keydown.enter.prevent="handleKeydown" />
       <div v-for="tag in tags" :key="tag" class="pill">#{{ tag }}</div>
-      <button>Add Post</button>
+      <button type="submit">Add Post</button>
     </form>
     <!-- <p>{{ tags }}</p> -->
   </div>
@@ -16,12 +16,14 @@
 
 <script>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 export default {
   setup() {
     const title = ref("");
     const body = ref("");
     const tag = ref("");
     const tags = ref([]);
+    const router = useRouter();
     const handleKeydown = () => {
       if (!tags.value.includes(tag.value) && tag.value !== "") {
         tag.value = tag.value.replace(/\s/, ""); // remove all white space
@@ -29,7 +31,27 @@ export default {
       }
       tag.value = "";
     };
-    return { title, body, tag, handleKeydown, tags };
+    const submitHanlder = async () => {
+      const post = {
+        title: title.value,
+        body: body.value,
+        tags: tags.value,
+      };
+      await fetch("http://localhost:3000/posts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(post),
+      })
+        .then(() => {
+          body.value = "";
+          title.value = "";
+          tag.value = "";
+          tags.value = [];
+          router.push({ name: "Home" });
+        })
+        .catch();
+    };
+    return { title, body, tag, handleKeydown, tags, submitHanlder };
   },
 };
 </script>
