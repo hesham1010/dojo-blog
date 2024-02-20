@@ -1,18 +1,29 @@
+<script>
+import { ref } from "vue";
+import PostList from "@/components/PostList.vue";
+import getPosts from "../composables/getPosts";
+import Spinner from "@/components/Spinner.vue";
+export default {
+  name: "HomeView",
+  components: { PostList, Spinner },
+  setup() {
+    const showPosts = ref(true);
+    const { posts, error, load } = getPosts();
+    load();
+    return { posts, showPosts, error };
+  },
+};
+</script>
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Home</h1>
+    <div v-if="error">{{ error }}</div>
+    <div v-if="posts.length">
+      <PostList v-if="showPosts" :posts="posts" />
+    </div>
+    <div v-else><Spinner /></div>
+    <button @click="() => (showPosts = !showPosts)">toggle Posts</button>
+    <button @click="posts.pop()">Delte Post</button>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
-</script>
